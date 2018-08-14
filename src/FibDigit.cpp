@@ -1,6 +1,6 @@
 /* *********************************************************************************************************************
   included header files
-***********************************************************************************************************************/
+ ***********************************************************************************************************************/
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
@@ -9,34 +9,57 @@
 
 /* *********************************************************************************************************************
   class member functions
-***********************************************************************************************************************/
+ ***********************************************************************************************************************/
 void
 FibDigit::genFibonacciSeq(void)
 {
 
-	listnodeinsert(fib1);
-	listnodeinsert(fib2);
+	listnodeinsert(&HEAD, fib1);
+	listnodeinsert(&HEAD, fib2);
 	while(fib1 + fib2 < length)
 	{
 		fib3 = fib1 + fib2;
 		fib1 = fib2;
 		fib2 = fib3;
-		listnodeinsert(fib3);
+		listnodeinsert(&HEAD, fib3);
+	}
+
+	listprint(&HEAD);
+
+	/*Convert the data in linked list to single digits*/
+	node* temp = HEAD;
+	temparr = (unsigned int*)malloc(length);
+
+	while(temp != null){
+		unsigned int number = temp->data;
+		while(number > 0){
+			unsigned char digit = number%10;
+			number /= 10;
+			push(digit);
+		}
+		while(TOP != NULL){
+			unsigned int digit = TOP->data;
+			pop();
+			temparr[count++] = digit;
+		}
+		temp = temp->next;
+		temparr[count++] = 'e';
+		count--;
 	}
 }
 
 void
-FibDigit::listnodeinsert(unsigned int data)
+FibDigit::listnodeinsert(node** head, unsigned int data)
 {
 
-	node* temp1 = HEAD;
+	node* temp1 = *head;
 	node* temp2 = (node*)malloc(sizeof(node));
 
 	temp2->data = data;
 	temp2->next = null;
 
 	if(temp1 == null){
-		HEAD = temp2;
+		*head = temp2;
 		return;
 	}
 
@@ -49,14 +72,14 @@ FibDigit::listnodeinsert(unsigned int data)
 }
 
 void
-FibDigit::listnodedelete(unsigned int n)
+FibDigit::listnodedelete(node** head, unsigned int n)
 {
 
-	node* temp1 = HEAD;
+	node* temp1 = *head;
 	node* temp2 = null;
 
 	if(n == 1){
-		HEAD = temp1->next;
+		*head = temp1->next;
 		free(temp1);
 		temp1 = null;
 		return;
@@ -73,10 +96,10 @@ FibDigit::listnodedelete(unsigned int n)
 }
 
 void
-FibDigit::listprint()
+FibDigit::listprint(node** head)
 {
 
-	node* temp = HEAD;
+	node* temp = *head;
 
 	unsigned int nodecount =0;
 
@@ -106,30 +129,8 @@ FibDigit::pop(void)
 
 
 void
-FibDigit::runStatistics()
+FibDigit::runStatistics(void)
 {
-
-	/*Convert the data in linked list to single digits*/
-	node* temp = HEAD;
-	unsigned int count = 0;
-	unsigned int* temparr = (unsigned int*)malloc(length);
-
-	while(temp != null){
-		unsigned int number = temp->data;
-		while(number > 0){
-			unsigned char digit = number%10;
-			number /= 10;
-			push(digit);
-		}
-		while(TOP != NULL){
-			 unsigned int digit = TOP->data;
-			 pop();
-			 temparr[count++] = digit;
-		}
-		temp = temp->next;
-		temparr[count++] = 'e';
-		count--;
-	}
 
 	printf("\n number of digits count = %d\n", count);
 

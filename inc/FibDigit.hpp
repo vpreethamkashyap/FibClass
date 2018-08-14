@@ -2,6 +2,7 @@
 #define FIBDIGIT_HPP
 
 #define null 0
+#define MAXLIMIT 1023
 
 struct node
 {
@@ -41,6 +42,18 @@ private:
 	 */
 	unsigned int positions;
 
+protected:
+
+	/**
+	 * @brief Temporary dynamic array to hold the digits generated
+	 */
+	unsigned int* temparr = null;
+
+	/**
+	 * @brief value to hold the number of digits generated
+	 */
+	unsigned int count = 0;
+
 public:
 
 	/**
@@ -53,14 +66,14 @@ public:
 		fib3(1),
 		positions(0)
 
-	{
-		if(length > 1023){
-			length = 1023;
+{
+		if(this->length > MAXLIMIT){
+			this->length = MAXLIMIT;
 		}
-	}
+}
 
 	/**
-	 * Deconstructor
+	 * De-constructor
 	 */
 	virtual ~FibDigit(void){}
 
@@ -76,21 +89,21 @@ public:
 	 * @param data value to be inserted
 	 * @return void
 	 */
-	virtual void listnodeinsert(unsigned int data);
+	virtual void listnodeinsert(node** head, unsigned int data);
 
 	/**
 	 * @brief Removal of nth entry in original data structure (list)
 	 * @param nth node to be deleted, should be with in positions value
 	 * @return void
 	 */
-	virtual void listnodedelete(unsigned int n);
+	virtual void listnodedelete(node** head, unsigned int n);
 
 	/**
 	 * @brief To return fionacci sequence before and after filtering
 	 * @param void
 	 * @return void
 	 */
-	virtual void listprint(void);
+	virtual void listprint(node** head);
 
 	/**
 	 * @brief To return fionacci sequence before and after filtering
