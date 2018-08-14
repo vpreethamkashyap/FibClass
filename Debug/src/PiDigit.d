@@ -1,9 +1,6 @@
-src/Driver.o: ../src/Driver.cpp \
- /home/preetham/Neon/workspace/Lidar_Test/inc/FibDigit.hpp \
+src/PiDigit.o: ../src/PiDigit.cpp \
  /home/preetham/Neon/workspace/Lidar_Test/inc/PiDigit.hpp \
  /home/preetham/Neon/workspace/Lidar_Test/inc/FibDigit.hpp
-
-/home/preetham/Neon/workspace/Lidar_Test/inc/FibDigit.hpp:
 
 /home/preetham/Neon/workspace/Lidar_Test/inc/PiDigit.hpp:
 

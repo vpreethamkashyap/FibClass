@@ -2,6 +2,7 @@
   included header files
 ***********************************************************************************************************************/
 #include "FibDigit.hpp"
+#include "PiDigit.hpp"
 
 
 /* *********************************************************************************************************************
@@ -9,11 +10,9 @@
 ***********************************************************************************************************************/
 int main (void)
 {
-	FibDigit fibdigit(1023);
-	fibdigit.genFibonacciSeq();
-	fibdigit.listprint();
-	fibdigit.runStatistics();
-
+	//FibDigit fibdigit(1023);
+	PiDigit pidigit(1023);
+	pidigit.estimatePi();
 
 	return 0;
 
