@@ -42,3 +42,14 @@ For each n in N, the program should do the following:
 2. Print Pi estimate, to the precision of ​ M before and after filtering
 3. Print the stats (count, histogram, mean, sigma) - before and after filtering.
 
+# Brief
+
+I have used Monte Carlo method to estimate Pi as i felt it could give precise value for each digit.
+
+The maximum values the user could input for M and N, will be number of nodes generated after estimaiting pi. 
+
+I have used Doxygen to generate documentation of class showing class relations and member access levels. 
+
+I have also supporting unit test google framework application for this project. 
+
+
