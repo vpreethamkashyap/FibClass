@@ -1,0 +1,243 @@
+\hypertarget{classPiDigit}{}\section{Pi\+Digit Class Reference}
+\label{classPiDigit}\index{Pi\+Digit@{Pi\+Digit}}
+
+
+{\ttfamily \#include $<$Pi\+Digit.\+hpp$>$}
+
+Inheritance diagram for Pi\+Digit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPiDigit}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPiDigit_1_1mynode}{mynode}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPiDigit_a6c2d826e03edc8390476d0002aaa2d46}{Pi\+Digit}} (unsigned int \mbox{\hyperlink{classPiDigit_adeaaf0996ef9c846df7ba38b4949ad99}{length}}=0)
+\item 
+virtual \mbox{\hyperlink{classPiDigit_aa0f42ed34e114727252adf725dcb6423}{$\sim$\+Pi\+Digit}} (void)
+\item 
+virtual void \mbox{\hyperlink{classPiDigit_a22de7b729cf3eb47aa7cb18ba3e25a2e}{estimate\+Pi}} (void)
+\begin{DoxyCompactList}\small\item\em To estimate pi to $<$length$>$ digits. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPiDigit_a2cd414a3059a0ba20a9fa47a09dd7dd0}{listnodeinsert}} (\mbox{\hyperlink{structPiDigit_1_1mynode}{mynode}} $\ast$$\ast$head, double data)
+\item 
+virtual void \mbox{\hyperlink{classPiDigit_af025a33c3fbc5639d8843f32a19f2a51}{listnodedelete}} (\mbox{\hyperlink{structPiDigit_1_1mynode}{mynode}} $\ast$$\ast$head, unsigned int n)
+\item 
+virtual void \mbox{\hyperlink{classPiDigit_ae905d997df53e6e2795313174d1a18d6}{listprint}} (\mbox{\hyperlink{structPiDigit_1_1mynode}{mynode}} $\ast$$\ast$head, unsigned int precision)
+\item 
+virtual void \mbox{\hyperlink{classPiDigit_a015de54a634ef5657639269d02668927}{run\+Statistics}} (void)
+\begin{DoxyCompactList}\small\item\em Perform some statistical analysis. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classPiDigit_af7c707f9f6abf02da5a629c6808724d9}{getpositions}} (void)
+\begin{DoxyCompactList}\small\item\em Perform some statistical analysis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPiDigit_aa14bbb69f9e54b0c750596ee1b2b6f6a}{filterdata}} (unsigned int n)
+\begin{DoxyCompactList}\small\item\em Perform some statistical analysis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPiDigit_a65472a23d6e66b78e2101e67cc24b03a}{pidatatraversal}} (unsigned int precision)
+\begin{DoxyCompactList}\small\item\em Perform some statistical analysis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classPiDigit_adeaaf0996ef9c846df7ba38b4949ad99}{length}}
+\begin{DoxyCompactList}\small\item\em The parameter that defines the size of fibonacci sequence. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structPiDigit_1_1mynode}{mynode}} $\ast$ \mbox{\hyperlink{classPiDigit_acd2ff3ad1661062acf9a0fd1446e2fbe}{H\+E\+AD}} = \mbox{\hyperlink{FibDigit_8hpp_ac97b8ee753e4405397a42ad5799b0f9e}{null}}
+\begin{DoxyCompactList}\small\item\em Linked list data structure to store fibonacci sequence. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classPiDigit_a2ddc1d48a6436aa32ba4ac5a4567d50c}{positions}} = 0
+\begin{DoxyCompactList}\small\item\em Position holder for linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPiDigit_a6c2d826e03edc8390476d0002aaa2d46}\label{classPiDigit_a6c2d826e03edc8390476d0002aaa2d46}} 
+\index{Pi\+Digit@{Pi\+Digit}!Pi\+Digit@{Pi\+Digit}}
+\index{Pi\+Digit@{Pi\+Digit}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{Pi\+Digit()}{PiDigit()}}
+{\footnotesize\ttfamily Pi\+Digit\+::\+Pi\+Digit (\begin{DoxyParamCaption}\item[{unsigned int}]{length = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor \mbox{\Hypertarget{classPiDigit_aa0f42ed34e114727252adf725dcb6423}\label{classPiDigit_aa0f42ed34e114727252adf725dcb6423}} 
+\index{Pi\+Digit@{Pi\+Digit}!````~Pi\+Digit@{$\sim$\+Pi\+Digit}}
+\index{````~Pi\+Digit@{$\sim$\+Pi\+Digit}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{$\sim$\+Pi\+Digit()}{~PiDigit()}}
+{\footnotesize\ttfamily virtual Pi\+Digit\+::$\sim$\+Pi\+Digit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+De-\/constructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPiDigit_a22de7b729cf3eb47aa7cb18ba3e25a2e}\label{classPiDigit_a22de7b729cf3eb47aa7cb18ba3e25a2e}} 
+\index{Pi\+Digit@{Pi\+Digit}!estimate\+Pi@{estimate\+Pi}}
+\index{estimate\+Pi@{estimate\+Pi}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{estimate\+Pi()}{estimatePi()}}
+{\footnotesize\ttfamily void Pi\+Digit\+::estimate\+Pi (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To estimate pi to $<$length$>$ digits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPiDigit_aa14bbb69f9e54b0c750596ee1b2b6f6a}\label{classPiDigit_aa14bbb69f9e54b0c750596ee1b2b6f6a}} 
+\index{Pi\+Digit@{Pi\+Digit}!filterdata@{filterdata}}
+\index{filterdata@{filterdata}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{filterdata()}{filterdata()}}
+{\footnotesize\ttfamily void Pi\+Digit\+::filterdata (\begin{DoxyParamCaption}\item[{unsigned int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Perform some statistical analysis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPiDigit_af7c707f9f6abf02da5a629c6808724d9}\label{classPiDigit_af7c707f9f6abf02da5a629c6808724d9}} 
+\index{Pi\+Digit@{Pi\+Digit}!getpositions@{getpositions}}
+\index{getpositions@{getpositions}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{getpositions()}{getpositions()}}
+{\footnotesize\ttfamily unsigned int Pi\+Digit\+::getpositions (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Perform some statistical analysis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPiDigit_af025a33c3fbc5639d8843f32a19f2a51}\label{classPiDigit_af025a33c3fbc5639d8843f32a19f2a51}} 
+\index{Pi\+Digit@{Pi\+Digit}!listnodedelete@{listnodedelete}}
+\index{listnodedelete@{listnodedelete}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{listnodedelete()}{listnodedelete()}}
+{\footnotesize\ttfamily void Pi\+Digit\+::listnodedelete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPiDigit_1_1mynode}{mynode}} $\ast$$\ast$}]{head,  }\item[{unsigned int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nth} & node to be deleted, should be with in positions value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPiDigit_a2cd414a3059a0ba20a9fa47a09dd7dd0}\label{classPiDigit_a2cd414a3059a0ba20a9fa47a09dd7dd0}} 
+\index{Pi\+Digit@{Pi\+Digit}!listnodeinsert@{listnodeinsert}}
+\index{listnodeinsert@{listnodeinsert}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{listnodeinsert()}{listnodeinsert()}}
+{\footnotesize\ttfamily void Pi\+Digit\+::listnodeinsert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPiDigit_1_1mynode}{mynode}} $\ast$$\ast$}]{head,  }\item[{double}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & value to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPiDigit_ae905d997df53e6e2795313174d1a18d6}\label{classPiDigit_ae905d997df53e6e2795313174d1a18d6}} 
+\index{Pi\+Digit@{Pi\+Digit}!listprint@{listprint}}
+\index{listprint@{listprint}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{listprint()}{listprint()}}
+{\footnotesize\ttfamily void Pi\+Digit\+::listprint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPiDigit_1_1mynode}{mynode}} $\ast$$\ast$}]{head,  }\item[{unsigned int}]{precision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPiDigit_a65472a23d6e66b78e2101e67cc24b03a}\label{classPiDigit_a65472a23d6e66b78e2101e67cc24b03a}} 
+\index{Pi\+Digit@{Pi\+Digit}!pidatatraversal@{pidatatraversal}}
+\index{pidatatraversal@{pidatatraversal}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{pidatatraversal()}{pidatatraversal()}}
+{\footnotesize\ttfamily void Pi\+Digit\+::pidatatraversal (\begin{DoxyParamCaption}\item[{unsigned int}]{precision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Perform some statistical analysis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPiDigit_a015de54a634ef5657639269d02668927}\label{classPiDigit_a015de54a634ef5657639269d02668927}} 
+\index{Pi\+Digit@{Pi\+Digit}!run\+Statistics@{run\+Statistics}}
+\index{run\+Statistics@{run\+Statistics}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{run\+Statistics()}{runStatistics()}}
+{\footnotesize\ttfamily void Pi\+Digit\+::run\+Statistics (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Perform some statistical analysis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classFibDigit_a6972af3a7b3a3ebd480655e9ea721b25}{Fib\+Digit}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classPiDigit_acd2ff3ad1661062acf9a0fd1446e2fbe}\label{classPiDigit_acd2ff3ad1661062acf9a0fd1446e2fbe}} 
+\index{Pi\+Digit@{Pi\+Digit}!H\+E\+AD@{H\+E\+AD}}
+\index{H\+E\+AD@{H\+E\+AD}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{H\+E\+AD}{HEAD}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structPiDigit_1_1mynode}{mynode}}$\ast$ Pi\+Digit\+::\+H\+E\+AD = \mbox{\hyperlink{FibDigit_8hpp_ac97b8ee753e4405397a42ad5799b0f9e}{null}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Linked list data structure to store fibonacci sequence. 
+
+\mbox{\Hypertarget{classPiDigit_adeaaf0996ef9c846df7ba38b4949ad99}\label{classPiDigit_adeaaf0996ef9c846df7ba38b4949ad99}} 
+\index{Pi\+Digit@{Pi\+Digit}!length@{length}}
+\index{length@{length}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily unsigned int Pi\+Digit\+::length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The parameter that defines the size of fibonacci sequence. 
+
+0 $<$ length $<$ 2$^\wedge$(9) \mbox{\Hypertarget{classPiDigit_a2ddc1d48a6436aa32ba4ac5a4567d50c}\label{classPiDigit_a2ddc1d48a6436aa32ba4ac5a4567d50c}} 
+\index{Pi\+Digit@{Pi\+Digit}!positions@{positions}}
+\index{positions@{positions}!Pi\+Digit@{Pi\+Digit}}
+\subsubsection{\texorpdfstring{positions}{positions}}
+{\footnotesize\ttfamily unsigned int Pi\+Digit\+::positions = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Position holder for linked list. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{PiDigit_8hpp}{Pi\+Digit.\+hpp}}\item 
+src/\mbox{\hyperlink{PiDigit_8cpp}{Pi\+Digit.\+cpp}}\end{DoxyCompactItemize}

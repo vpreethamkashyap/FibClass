@@ -1,15 +1,19 @@
+/* *********************************************************************************************************************
+  included header files
+ ***********************************************************************************************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/*
-#include <limits>
-#include <iostream>
-*/
-
+#include <float.h>
 #include <math.h>
 
 #include "PiDigit.hpp"
 
+
+/* *********************************************************************************************************************
+  class member functions
+ ***********************************************************************************************************************/
 void
 PiDigit::estimatePi(void)
 {
@@ -54,13 +58,9 @@ PiDigit::estimatePi(void)
 
 		listnodeinsert(&HEAD, pi);
 	}
-	listprint(&HEAD);
+	listprint(&HEAD, this->positions);
 
 	this->runStatistics();
-
-	/*double d = 3.14159265358979;
-	std::cout.precision(17);
-	std::cout << "Pi: " << std::fixed << d << std::endl;*/
 }
 
 void
@@ -147,34 +147,46 @@ void
 PiDigit::listnodedelete(mynode** head, unsigned int n)
 {
 	mynode* temp1 = *head;
-	mynode* temp2 = null;
 
-	if(n == 1){
+	// If linked list is empty
+	if(*head == null)
+		return;
+
+	// If head needs to be removed
+	if(n == 0){
 		*head = temp1->next;
 		free(temp1);
-		temp1 = null;
+		positions--;
 		return;
 	}
 
-	for(unsigned int i = 0; i < n-2; i++){
+	//Find previous node of the node to be deleted
+	for(unsigned int i = 0; temp1!= null && i <n-1; i++){
 		temp1 = temp1->next;
 	}
 
-	temp2 = temp1->next;
-	temp1->next = temp2->next;
-	free(temp2);
-	temp2 = null;
+	// If position is more than number of nodes
+	if(temp1 == null || temp1->next == null)
+		return;
+
+	mynode* temp2 = temp1->next->next;
+	free(temp1->next);
+	positions--;
+	temp1->next  = temp2;
+
 }
 
 void
-PiDigit::listprint(mynode** head)
+PiDigit::listprint(mynode** head, unsigned int precision)
 {
 	mynode* temp = *head;
 
 	unsigned int nodecount =0;
 
+	unsigned int Digs = precision;
+
 	while(temp != null){
-		printf("The data in the node %d is %f\n", ++nodecount, temp->data);
+		printf("The data in the node %d is %.*f\n", ++nodecount, Digs, temp->data);
 		temp = temp->next;
 	}
 

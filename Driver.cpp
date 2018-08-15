@@ -19,8 +19,7 @@ int main (void)
 	pidigit.estimatePi();
 
 	unsigned int Nrange = pidigit.getpositions();
-
-	unsigned int Mrange = pidigit.getcount();
+	unsigned int Mrange = pidigit.getpositions();
 
 	// The user input values for M and N should be with in Mrange and Nrange respectively
 
@@ -42,17 +41,50 @@ int main (void)
 
 	unsigned int* filter = (unsigned int*)malloc(N);
 
+	//Initialize random number generator
 	srand(time(null));
 
 	unsigned int minimum_number = 0;
 	unsigned int maximum_number = M -1;
 
+	// To generate filter array of size N and populate the array with random values ranging from 0 to M-1
 	for(unsigned int i = 0; i<N; i++){
-		filter[i] = rand() % (maximum_number + 1 - minimum_number) + minimum_number;;
+		filter[i] = rand() % (maximum_number + 1 - minimum_number) + minimum_number;
 	}
-	for(unsigned int i = 0; i<N; i++){
+
+	// Now lets delete the Duplicate elements from the array
+	for(unsigned int i = 0; i<N; i++)
+	{
+		for(unsigned int j = i+1; j<N; j++)
+		{
+			if(filter[i] == filter[j])
+			{
+				for(unsigned int k = j; k< N; k++)
+				{
+					filter[k] = filter[k+1];
+				}
+				N--;
+				j--;
+			}
+		}
+	}
+
+	printf("Size of Modified N is %d \n", N);
+
+	// Filter the nodes from pi linked list
+	for(unsigned int i =0; i<N; i++)
+	{
 		printf("%d ", filter[i]);
+		pidigit.filterdata(filter[i]);
 	}
+
+	//Print Pi estimate
+	printf("\n");
+	pidigit.pidatatraversal(M);
+
+	//Print statistics
+	pidigit.runStatistics();
+
 
 	return 0;
 
