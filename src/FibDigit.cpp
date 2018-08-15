@@ -60,6 +60,7 @@ FibDigit::listnodeinsert(node** head, unsigned int data)
 
 	if(temp1 == null){
 		*head = temp2;
+		positions++;
 		return;
 	}
 
@@ -68,6 +69,7 @@ FibDigit::listnodeinsert(node** head, unsigned int data)
 	}
 
 	temp1->next = temp2;
+	positions++;
 
 }
 
@@ -82,6 +84,7 @@ FibDigit::listnodedelete(node** head, unsigned int n)
 		*head = temp1->next;
 		free(temp1);
 		temp1 = null;
+		positions--;
 		return;
 	}
 
@@ -93,6 +96,7 @@ FibDigit::listnodedelete(node** head, unsigned int n)
 	temp1->next = temp2->next;
 	free(temp2);
 	temp2 = null;
+	positions--;
 }
 
 void

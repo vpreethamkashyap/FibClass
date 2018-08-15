@@ -53,7 +53,6 @@ PiDigit::estimatePi(void)
 		}
 
 		listnodeinsert(&HEAD, pi);
-		positions++;
 	}
 	listprint(&HEAD);
 
@@ -131,6 +130,7 @@ PiDigit::listnodeinsert(mynode** head, double data)
 
 	if(temp1 == null){
 		*head = temp2;
+		positions++;
 		return;
 	}
 
@@ -139,6 +139,7 @@ PiDigit::listnodeinsert(mynode** head, double data)
 	}
 
 	temp1->next = temp2;
+	positions++;
 
 }
 
