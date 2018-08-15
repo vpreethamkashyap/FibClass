@@ -40,7 +40,7 @@ private:
 	/**
 	 * @brief Position holder for linked list
 	 */
-	unsigned int positions;
+	unsigned int positions = 0;
 
 protected:
 
@@ -125,6 +125,14 @@ public:
 	 * @return void
 	 */
 	virtual void runStatistics(void);
+
+	/**
+	 * @brief return the value of positions variable
+	 * @param void
+	 * @return unsigned int
+	 */
+	unsigned int getcount(void){return positions;}
+
 };
 
 

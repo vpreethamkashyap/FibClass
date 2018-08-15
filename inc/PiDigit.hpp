@@ -30,7 +30,7 @@ private:
 	/**
 	 * @brief Position holder for linked list
 	 */
-	unsigned int positions;
+	unsigned int positions = 0;
 
 public:
 
@@ -86,7 +86,12 @@ public:
 	 */
 	virtual void runStatistics(void);
 
-
+	/**
+	 * @brief Perform some statistical analysis
+	 * @param void
+	 * @return void
+	 */
+	unsigned int getpositions(void){return this->positions;}
 };
 
 #endif
