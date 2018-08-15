@@ -1,0 +1,356 @@
+\hypertarget{classFibDigit}{}\section{Fib\+Digit Class Reference}
+\label{classFibDigit}\index{Fib\+Digit@{Fib\+Digit}}
+
+
+{\ttfamily \#include $<$Fib\+Digit.\+hpp$>$}
+
+Inheritance diagram for Fib\+Digit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFibDigit}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFibDigit_a5e31b225ec07653382a024d60ac47c68}{Fib\+Digit}} (unsigned int \mbox{\hyperlink{classFibDigit_a70d34085c62bdfb57390cc0ed04f9574}{length}}=0)
+\item 
+virtual \mbox{\hyperlink{classFibDigit_acd91f7e31add488e19f65675daaca7ea}{$\sim$\+Fib\+Digit}} (void)
+\item 
+virtual void \mbox{\hyperlink{classFibDigit_a66987864f12e264e1a088c9a394e9bb4}{gen\+Fibonacci\+Seq}} (void)
+\begin{DoxyCompactList}\small\item\em To generate fionacci sequence. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFibDigit_a6cfa565c583a0209b857445bcb788624}{listnodeinsert}} (\mbox{\hyperlink{structnode}{node}} $\ast$$\ast$head, unsigned int data)
+\begin{DoxyCompactList}\small\item\em Removal of nth entry in original data structure (list) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFibDigit_a4f2ec44ac3d289a908cfdf11b2d84a59}{listnodedelete}} (\mbox{\hyperlink{structnode}{node}} $\ast$$\ast$head, unsigned int n)
+\begin{DoxyCompactList}\small\item\em Removal of nth entry in original data structure (list) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFibDigit_af3285f686c8e8968dc604388b9ee65be}{listprint}} (\mbox{\hyperlink{structnode}{node}} $\ast$$\ast$head)
+\begin{DoxyCompactList}\small\item\em To return fionacci sequence before and after filtering. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFibDigit_a4ff36c80f50d8fa62e6d691e6264b6e5}{push}} (unsigned int data)
+\begin{DoxyCompactList}\small\item\em To return fionacci sequence before and after filtering. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFibDigit_a378b92b5328d1e0f532f63ce0ee38c37}{pop}} ()
+\begin{DoxyCompactList}\small\item\em To return fionacci sequence before and after filtering. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFibDigit_a6972af3a7b3a3ebd480655e9ea721b25}{run\+Statistics}} (void)
+\begin{DoxyCompactList}\small\item\em Perform some statistical analysis. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classFibDigit_af7c8489aab55c20fece480e96742ca50}{getcount}} (void)
+\begin{DoxyCompactList}\small\item\em return the value of positions variable \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFibDigit_ae57c73962682173611e86ca5938dede8}{setlength}} (unsigned int \mbox{\hyperlink{classFibDigit_a70d34085c62bdfb57390cc0ed04f9574}{length}})
+\begin{DoxyCompactList}\small\item\em return the value of positions variable \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classFibDigit_af4de1f9f55c71692d86035e017265947}{getlength}} (void)
+\begin{DoxyCompactList}\small\item\em return the value of positions variable \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int $\ast$ \mbox{\hyperlink{classFibDigit_a1e02ed6ccd14aa5075b0a7ebf5828e13}{temparr}} = \mbox{\hyperlink{FibDigit_8hpp_ac97b8ee753e4405397a42ad5799b0f9e}{null}}
+\begin{DoxyCompactList}\small\item\em Temporary dynamic array to hold the digits generated. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classFibDigit_a4d440bf0f330acbe91cb92fa458b0876}{count}} = 0
+\begin{DoxyCompactList}\small\item\em value to hold the number of digits generated \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classFibDigit_a70d34085c62bdfb57390cc0ed04f9574}{length}}
+\begin{DoxyCompactList}\small\item\em The parameter that defines the size of fibonacci sequence. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{classFibDigit_af25e4de406bf87e1a7a3323aaf2355f9}{H\+E\+AD}} = \mbox{\hyperlink{FibDigit_8hpp_ac97b8ee753e4405397a42ad5799b0f9e}{null}}
+\begin{DoxyCompactList}\small\item\em Linked list data structure to store fibonacci sequence. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{classFibDigit_a2c820e980a3e4c69f118f3778fd84206}{T\+OP}} = \mbox{\hyperlink{FibDigit_8hpp_ac97b8ee753e4405397a42ad5799b0f9e}{null}}
+\begin{DoxyCompactList}\small\item\em stack data structure to store fibonacci sequence \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classFibDigit_ab21b28fe63f8cc828d1147539c08f75b}{fib1}}
+\begin{DoxyCompactList}\small\item\em First three numbers of the sequence are already known. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classFibDigit_ad8d4f9cf0ceaea45d844f719c95762d2}{fib2}}
+\item 
+unsigned int \mbox{\hyperlink{classFibDigit_a98a33382e322c6455eecdcfb78170417}{fib3}}
+\item 
+unsigned int \mbox{\hyperlink{classFibDigit_a980e50a82197fa46e104ac2f9208a70b}{positions}} = 0
+\begin{DoxyCompactList}\small\item\em Position holder for linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFibDigit_a5e31b225ec07653382a024d60ac47c68}\label{classFibDigit_a5e31b225ec07653382a024d60ac47c68}} 
+\index{Fib\+Digit@{Fib\+Digit}!Fib\+Digit@{Fib\+Digit}}
+\index{Fib\+Digit@{Fib\+Digit}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{Fib\+Digit()}{FibDigit()}}
+{\footnotesize\ttfamily Fib\+Digit\+::\+Fib\+Digit (\begin{DoxyParamCaption}\item[{unsigned int}]{length = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor \mbox{\Hypertarget{classFibDigit_acd91f7e31add488e19f65675daaca7ea}\label{classFibDigit_acd91f7e31add488e19f65675daaca7ea}} 
+\index{Fib\+Digit@{Fib\+Digit}!````~Fib\+Digit@{$\sim$\+Fib\+Digit}}
+\index{````~Fib\+Digit@{$\sim$\+Fib\+Digit}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{$\sim$\+Fib\+Digit()}{~FibDigit()}}
+{\footnotesize\ttfamily virtual Fib\+Digit\+::$\sim$\+Fib\+Digit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+De-\/constructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFibDigit_a66987864f12e264e1a088c9a394e9bb4}\label{classFibDigit_a66987864f12e264e1a088c9a394e9bb4}} 
+\index{Fib\+Digit@{Fib\+Digit}!gen\+Fibonacci\+Seq@{gen\+Fibonacci\+Seq}}
+\index{gen\+Fibonacci\+Seq@{gen\+Fibonacci\+Seq}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{gen\+Fibonacci\+Seq()}{genFibonacciSeq()}}
+{\footnotesize\ttfamily void Fib\+Digit\+::gen\+Fibonacci\+Seq (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To generate fionacci sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFibDigit_af7c8489aab55c20fece480e96742ca50}\label{classFibDigit_af7c8489aab55c20fece480e96742ca50}} 
+\index{Fib\+Digit@{Fib\+Digit}!getcount@{getcount}}
+\index{getcount@{getcount}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{getcount()}{getcount()}}
+{\footnotesize\ttfamily unsigned int Fib\+Digit\+::getcount (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the value of positions variable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFibDigit_af4de1f9f55c71692d86035e017265947}\label{classFibDigit_af4de1f9f55c71692d86035e017265947}} 
+\index{Fib\+Digit@{Fib\+Digit}!getlength@{getlength}}
+\index{getlength@{getlength}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{getlength()}{getlength()}}
+{\footnotesize\ttfamily unsigned int Fib\+Digit\+::getlength (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the value of positions variable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFibDigit_a4f2ec44ac3d289a908cfdf11b2d84a59}\label{classFibDigit_a4f2ec44ac3d289a908cfdf11b2d84a59}} 
+\index{Fib\+Digit@{Fib\+Digit}!listnodedelete@{listnodedelete}}
+\index{listnodedelete@{listnodedelete}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{listnodedelete()}{listnodedelete()}}
+{\footnotesize\ttfamily void Fib\+Digit\+::listnodedelete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnode}{node}} $\ast$$\ast$}]{head,  }\item[{unsigned int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Removal of nth entry in original data structure (list) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nth} & node to be deleted, should be with in positions value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFibDigit_a6cfa565c583a0209b857445bcb788624}\label{classFibDigit_a6cfa565c583a0209b857445bcb788624}} 
+\index{Fib\+Digit@{Fib\+Digit}!listnodeinsert@{listnodeinsert}}
+\index{listnodeinsert@{listnodeinsert}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{listnodeinsert()}{listnodeinsert()}}
+{\footnotesize\ttfamily void Fib\+Digit\+::listnodeinsert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnode}{node}} $\ast$$\ast$}]{head,  }\item[{unsigned int}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Removal of nth entry in original data structure (list) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & value to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFibDigit_af3285f686c8e8968dc604388b9ee65be}\label{classFibDigit_af3285f686c8e8968dc604388b9ee65be}} 
+\index{Fib\+Digit@{Fib\+Digit}!listprint@{listprint}}
+\index{listprint@{listprint}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{listprint()}{listprint()}}
+{\footnotesize\ttfamily void Fib\+Digit\+::listprint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnode}{node}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To return fionacci sequence before and after filtering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFibDigit_a378b92b5328d1e0f532f63ce0ee38c37}\label{classFibDigit_a378b92b5328d1e0f532f63ce0ee38c37}} 
+\index{Fib\+Digit@{Fib\+Digit}!pop@{pop}}
+\index{pop@{pop}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void Fib\+Digit\+::pop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To return fionacci sequence before and after filtering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFibDigit_a4ff36c80f50d8fa62e6d691e6264b6e5}\label{classFibDigit_a4ff36c80f50d8fa62e6d691e6264b6e5}} 
+\index{Fib\+Digit@{Fib\+Digit}!push@{push}}
+\index{push@{push}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void Fib\+Digit\+::push (\begin{DoxyParamCaption}\item[{unsigned int}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To return fionacci sequence before and after filtering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & value to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFibDigit_a6972af3a7b3a3ebd480655e9ea721b25}\label{classFibDigit_a6972af3a7b3a3ebd480655e9ea721b25}} 
+\index{Fib\+Digit@{Fib\+Digit}!run\+Statistics@{run\+Statistics}}
+\index{run\+Statistics@{run\+Statistics}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{run\+Statistics()}{runStatistics()}}
+{\footnotesize\ttfamily void Fib\+Digit\+::run\+Statistics (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Perform some statistical analysis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classPiDigit_a015de54a634ef5657639269d02668927}{Pi\+Digit}}.
+
+\mbox{\Hypertarget{classFibDigit_ae57c73962682173611e86ca5938dede8}\label{classFibDigit_ae57c73962682173611e86ca5938dede8}} 
+\index{Fib\+Digit@{Fib\+Digit}!setlength@{setlength}}
+\index{setlength@{setlength}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{setlength()}{setlength()}}
+{\footnotesize\ttfamily void Fib\+Digit\+::setlength (\begin{DoxyParamCaption}\item[{unsigned int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the value of positions variable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classFibDigit_a4d440bf0f330acbe91cb92fa458b0876}\label{classFibDigit_a4d440bf0f330acbe91cb92fa458b0876}} 
+\index{Fib\+Digit@{Fib\+Digit}!count@{count}}
+\index{count@{count}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily unsigned int Fib\+Digit\+::count = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+value to hold the number of digits generated 
+
+\mbox{\Hypertarget{classFibDigit_ab21b28fe63f8cc828d1147539c08f75b}\label{classFibDigit_ab21b28fe63f8cc828d1147539c08f75b}} 
+\index{Fib\+Digit@{Fib\+Digit}!fib1@{fib1}}
+\index{fib1@{fib1}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{fib1}{fib1}}
+{\footnotesize\ttfamily unsigned int Fib\+Digit\+::fib1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+First three numbers of the sequence are already known. 
+
+\mbox{\Hypertarget{classFibDigit_ad8d4f9cf0ceaea45d844f719c95762d2}\label{classFibDigit_ad8d4f9cf0ceaea45d844f719c95762d2}} 
+\index{Fib\+Digit@{Fib\+Digit}!fib2@{fib2}}
+\index{fib2@{fib2}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{fib2}{fib2}}
+{\footnotesize\ttfamily unsigned int Fib\+Digit\+::fib2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFibDigit_a98a33382e322c6455eecdcfb78170417}\label{classFibDigit_a98a33382e322c6455eecdcfb78170417}} 
+\index{Fib\+Digit@{Fib\+Digit}!fib3@{fib3}}
+\index{fib3@{fib3}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{fib3}{fib3}}
+{\footnotesize\ttfamily unsigned int Fib\+Digit\+::fib3\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFibDigit_af25e4de406bf87e1a7a3323aaf2355f9}\label{classFibDigit_af25e4de406bf87e1a7a3323aaf2355f9}} 
+\index{Fib\+Digit@{Fib\+Digit}!H\+E\+AD@{H\+E\+AD}}
+\index{H\+E\+AD@{H\+E\+AD}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{H\+E\+AD}{HEAD}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode}{node}}$\ast$ Fib\+Digit\+::\+H\+E\+AD = \mbox{\hyperlink{FibDigit_8hpp_ac97b8ee753e4405397a42ad5799b0f9e}{null}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Linked list data structure to store fibonacci sequence. 
+
+\mbox{\Hypertarget{classFibDigit_a70d34085c62bdfb57390cc0ed04f9574}\label{classFibDigit_a70d34085c62bdfb57390cc0ed04f9574}} 
+\index{Fib\+Digit@{Fib\+Digit}!length@{length}}
+\index{length@{length}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily unsigned int Fib\+Digit\+::length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The parameter that defines the size of fibonacci sequence. 
+
+0 $<$ length $<$ 2$^\wedge$(9) \mbox{\Hypertarget{classFibDigit_a980e50a82197fa46e104ac2f9208a70b}\label{classFibDigit_a980e50a82197fa46e104ac2f9208a70b}} 
+\index{Fib\+Digit@{Fib\+Digit}!positions@{positions}}
+\index{positions@{positions}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{positions}{positions}}
+{\footnotesize\ttfamily unsigned int Fib\+Digit\+::positions = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Position holder for linked list. 
+
+\mbox{\Hypertarget{classFibDigit_a1e02ed6ccd14aa5075b0a7ebf5828e13}\label{classFibDigit_a1e02ed6ccd14aa5075b0a7ebf5828e13}} 
+\index{Fib\+Digit@{Fib\+Digit}!temparr@{temparr}}
+\index{temparr@{temparr}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{temparr}{temparr}}
+{\footnotesize\ttfamily unsigned int$\ast$ Fib\+Digit\+::temparr = \mbox{\hyperlink{FibDigit_8hpp_ac97b8ee753e4405397a42ad5799b0f9e}{null}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Temporary dynamic array to hold the digits generated. 
+
+\mbox{\Hypertarget{classFibDigit_a2c820e980a3e4c69f118f3778fd84206}\label{classFibDigit_a2c820e980a3e4c69f118f3778fd84206}} 
+\index{Fib\+Digit@{Fib\+Digit}!T\+OP@{T\+OP}}
+\index{T\+OP@{T\+OP}!Fib\+Digit@{Fib\+Digit}}
+\subsubsection{\texorpdfstring{T\+OP}{TOP}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode}{node}}$\ast$ Fib\+Digit\+::\+T\+OP = \mbox{\hyperlink{FibDigit_8hpp_ac97b8ee753e4405397a42ad5799b0f9e}{null}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+stack data structure to store fibonacci sequence 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{FibDigit_8hpp}{Fib\+Digit.\+hpp}}\item 
+src/\mbox{\hyperlink{FibDigit_8cpp}{Fib\+Digit.\+cpp}}\end{DoxyCompactItemize}

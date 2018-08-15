@@ -133,6 +133,31 @@ public:
 	 */
 	unsigned int getcount(void){return positions;}
 
+	/**
+	 * @brief return the value of positions variable
+	 * @param void
+	 * @return unsigned int
+	 */
+	void setlength(unsigned int length)
+	{
+		if(length > MAXLIMIT)
+		{
+			this->length = MAXLIMIT;
+		}
+		else
+		{
+			this->length = length;
+		}
+	}
+
+	/**
+	 * @brief return the value of positions variable
+	 * @param void
+	 * @return unsigned int
+	 */
+	unsigned int getlength(void) {return this->length;}
+
+
 };
 
 

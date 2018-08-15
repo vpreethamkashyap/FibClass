@@ -65,19 +65,19 @@ public:
 	 */
 	virtual void listnodeinsert(mynode** head, double data);
 
-	/*
+	/**
 	 * @brief
 	 * @param nth node to be deleted, should be with in positions value
 	 * @return void
 	*/
 	virtual void listnodedelete(mynode** head, unsigned int n);
 
-	/*
+	/**
 	 * @brief
 	 * @param void
 	 * @return void
 	*/
-	virtual void listprint(mynode** head);
+	virtual void listprint(mynode** head, unsigned int precision);
 
 	/**
 	 * @brief Perform some statistical analysis
@@ -92,6 +92,20 @@ public:
 	 * @return void
 	 */
 	unsigned int getpositions(void){return this->positions;}
+
+	/**
+	 * @brief Perform some statistical analysis
+	 * @param void
+	 * @return void
+	 */
+	void filterdata(unsigned int n) {listnodedelete(&HEAD, n);}
+
+	/**
+	 * @brief Perform some statistical analysis
+	 * @param void
+	 * @return void
+	 */
+	void pidatatraversal(unsigned int precision) {listprint(&HEAD, precision);}
 };
 
 #endif
