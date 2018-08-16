@@ -1,6 +1,6 @@
 # Data analysis
 
-This is a sample project that demonstrates C++ inheritence and polymorphism. Project is developed in eclipse c/c++ environment and linux x86 toolset. The compiled results are shared below.
+This is a sample project that demonstrates C++ inheritence and polymorphism. Project created in Eclipse environment, with Linux x86 GCC support. To get this project to work, please install eclipse c/c++ environment and import the project in to the workspace and build it.
 
 # The base class will perform the following operations
 - Takes as a constructor parameter and ​ unsigned int <length> ​ , with 0 < ​ <length> ​ <
