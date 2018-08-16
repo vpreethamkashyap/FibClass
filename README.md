@@ -54,4 +54,4 @@ For each n in N, the program should do the following:
 
 # Runtime output of the project
 
-A test file present in the Project repository shows the entire runtime output of the project. 
+A text file present in the Project repository shows the entire runtime output of the project. 
