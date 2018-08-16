@@ -131,7 +131,14 @@ public:
 	 * @param void
 	 * @return unsigned int
 	 */
-	unsigned int getcount(void){return positions;}
+	unsigned int getpositions(void){return positions;}
+
+	/**
+	 * @brief return the value of positions variable
+	 * @param void
+	 * @return unsigned int
+	 */
+	unsigned int getcount(void){return this->count;}
 
 	/**
 	 * @brief return the value of positions variable

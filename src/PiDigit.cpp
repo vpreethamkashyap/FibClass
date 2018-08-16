@@ -66,7 +66,7 @@ PiDigit::estimatePi(void)
 void
 PiDigit::runStatistics(void)
 {
-	printf("\n number of digits count = %d\n", count);
+	printf("\n number of digits count = %d\n", this->positions);
 
 	mynode* temp = HEAD;
 
